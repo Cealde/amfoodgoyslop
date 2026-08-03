@@ -1,0 +1,307 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2e7d32;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f57c00;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2e7d32;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('hero.png') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p.motto {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    color: #fff8e1;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.btn {
+    background-color: #f57c00;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e65100;
+    transform: translateY(-2px);
+}
+
+/* --- Section Titles --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f57c00;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* --- Food Products Section --- */
+.products-section {
+    padding: 5rem 5%;
+    background-color: #f4f6f4;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.product-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-title {
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 1rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.quotes-section {
+    padding: 5rem 5%;
+    background-color: #ffffff;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.qa-card {
+    background-color: #ffffff;
+    border: 2px solid #e8f5e9;
+    border-top: 5px solid #2e7d32;
+    padding: 2.2rem 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.qa-card:hover {
+    border-top-color: #f57c00;
+    transform: translateY(-4px);
+}
+
+.qa-question {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.qa-answer {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #555;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Reviews Section --- */
+.reviews-section {
+    padding: 5rem 5%;
+    background-color: #f9f9f9;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    color: #ffb300;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.review-text {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #2e7d32;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.details h4 {
+    font-size: 1rem;
+    color: #222;
+}
+
+.details p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    .hero p.motto {
+        font-size: 1.2rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
