@@ -178,8 +178,18 @@ nav {
 
 .qa-card {
     background-color: #ffffff;
-    border: 2px solid #e8f5e9;
+    border: 2px solid #ffe285;
     border-top: 5px solid #2e7d32;
+    padding: 2.2rem 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.qa-card1 {
+    background-color: #ffffff;
+    border: 2px solid #ff8a2b;
     padding: 2.2rem 1.8rem;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
@@ -204,7 +214,6 @@ nav {
     font-size: 1.05rem;
     font-weight: 500;
     color: #555;
-    text-transform: lowercase;
     letter-spacing: 0.5px;
 }
 
